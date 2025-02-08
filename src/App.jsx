@@ -1,6 +1,6 @@
 import BunnyBackground from "./BunnyBackground"
 import CountdownTimer from "./CountdownTimer"
-import IosMessage from "./IosMessage"
+import IosMessage from "./IosMessage.jsx"
 import Menu from "./Menu"
 import { Route, Routes } from "react-router-dom"
 import { useState, useEffect } from "react"
