@@ -1,6 +1,6 @@
 import BunnyBackground from "./BunnyBackground"
 import CountdownTimer from "./CountdownTimer"
-import IOSHello from "./IosMessage"
+import IosMessage from "./IosMessage"
 import Menu from "./Menu"
 import { Route, Routes } from "react-router-dom"
 import { useState, useEffect } from "react"
@@ -28,7 +28,7 @@ const App = () => {
         ) : (
           <main className="relative z-10 flex justify-center items-center min-h-screen">
             <Routes>
-              <Route path="/" element={<IOSHello/> }/>
+              <Route path="/" element={<IosMessage/> }/>
               <Route path="/next-page" element={<Menu/>}/>
             </Routes>
           </main>
