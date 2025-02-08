@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import HoverText from "./Hovertext.jsx";
+import HoverText from "./Hovertext";
 
 
 const messages = [
