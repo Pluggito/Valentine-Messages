@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import HoverText from "./Hovertext";
+import HoverText from "./Hovertext.jsx";
 
 
 const messages = [
@@ -17,7 +17,7 @@ const messages = [
   "Olá"
 ];
 
-export default function IOSHello() {
+export default function IosMessage() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
