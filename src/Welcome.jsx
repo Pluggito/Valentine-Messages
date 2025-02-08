@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import HoverText from "./Hovertext";
+import HoverButton from "./HoverButton";
+
 
 
 const messages = [
@@ -44,7 +45,7 @@ const Welcome = () => {
           </motion.h1>
         </AnimatePresence>
         </div>
-        <HoverText />
+        <HoverButton />
       </div>
     );
 }
