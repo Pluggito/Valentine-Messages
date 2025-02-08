@@ -6,7 +6,9 @@ const HoverText = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex min-h-[20px] w-1/2 bg-inherit items-center justify-center px-4">
+    <div className="flex min-h-[20px] w-1/2 bg-inherit items-center justify-center px-4"
+    role="button"
+  tabIndex={0}>
       <SpotlightButton onClick={() => navigate('/next-page')} />
     </div>
   );
