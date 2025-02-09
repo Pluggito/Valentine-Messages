@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import Welcome from "./Welcome";
 import DisplayMessage from "./DisplayMessage";
 import { ToastContainer } from "react-toastify";
+import { Analytics } from "@vercel/analytics/react"
 
 
 const App = () => {
@@ -40,6 +41,8 @@ const App = () => {
            
           </Routes>
         </main> 
+
+        <Analytics/>
     </div>
   );
 };
