@@ -20,7 +20,7 @@ const App = () => {
   }, [countdownFinished, navigate]); */}
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden px-4 md:px-10 my-auto">
       {/* Bunny Background */}
       <BunnyBackground />
       <ToastContainer />
