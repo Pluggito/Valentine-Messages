@@ -3,7 +3,6 @@ import Menu from "./Menu";
 import { Route, Routes } from "react-router-dom";
 //mport { useState, useEffect } from "react";
 //import { useNavigate } from "react-router-dom";
-import Welcome from "./Welcome";
 import DisplayMessage from "./DisplayMessage";
 import { ToastContainer } from "react-toastify";
 import { Analytics } from "@vercel/analytics/react"
@@ -34,8 +33,7 @@ const App = () => {
 
       <main className="relative z-10 flex justify-center items-center min-h-screen">
           <Routes>
-            <Route path="/" element={<Welcome />} />
-            <Route path="/next-page" element={<Menu />} />
+            <Route path="/" element={<Menu />} />
             <Route path="/displaymessage" element={<DisplayMessage />} />
            
           </Routes>
