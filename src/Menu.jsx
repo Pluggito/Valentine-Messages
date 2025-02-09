@@ -6,6 +6,7 @@ import { LucideArrowLeft } from "lucide-react";
 import { useValentineContext } from './Context/ValentineContext';
 import { toast } from 'react-toastify';
 import {  useNavigate } from "react-router-dom";
+import Welcome from "./Welcome";
 
 export default function Menu() {
   const [menu, setMenu] = useState(1);
@@ -68,10 +69,13 @@ export default function Menu() {
 
   return (
     <header className="bg-inherit flex justify-center p-6 text-center w-xl sm:w-2xl">
+      
       {menu === 1 && (
         <div className="w-full">
+           <Welcome/>
+
           <motion.h1 
-            className="text-4xl font-bold text-pink-600 mb-10 font-[Dancing Script] w-full"
+            className="text-4xl font-bold text-pink-600 mb-10 font-[Dancing Script] w-full mt-4"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
