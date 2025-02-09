@@ -1,8 +1,9 @@
-import { useState } from "react";
 import { Heart } from "lucide-react";
+import { useEffect } from "react";
 
-const ValentineMenuButton = ({ onClick }) => {
-  const [isClicked, setIsClicked] = useState(false);
+
+const ValentineMenuButton = ({ onClick, text, setIsClicked, isClicked}) => {
+  
 
   const handleClick = () => {
     setIsClicked(true);
@@ -10,6 +11,9 @@ const ValentineMenuButton = ({ onClick }) => {
       onClick();
     }, 500); // Delay the onClick callback to allow the animation to complete
   };
+
+ 
+  // Dependency on name
 
   return (
     <button
@@ -26,7 +30,7 @@ const ValentineMenuButton = ({ onClick }) => {
       >
         <Heart className={`w-7 h-7 ${isClicked ? "animate-none" : "animate-heartbeat"}`} />
         <span className={`transition-opacity duration-300 ease-in-out font-medium ml-2 ${isClicked ? "opacity-0" : "opacity-100"}`}>
-          Explore Love
+          {text}
         </span>
       </div>
       {isClicked && (
