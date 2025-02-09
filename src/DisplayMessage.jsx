@@ -29,12 +29,12 @@ const DisplayMessage = () => {
                 transition={{ duration: 0.5 }}
                 className="max-w-lg w-full text-center bg-white p-6 rounded-lg shadow-lg"
             >
-                <h1 className="text-xl font-semibold text-red-500">{name && `Dear ${name},`}</h1>
+                <h1 className="text-xl md:text-2xl font-semibold text-red-500">{name && `Dear ${name},`}</h1>
 
                 {loading ? (
                     <p className="text-gray-500 animate-pulse">Generating your special message...</p>
                 ) : messages.length > 0 ? (
-                    <p className="text-gray-700 font-medium trackign-wide mt-4">{messages[0].content}</p>
+                    <p className="text-gray-700 font-medium tracking-wide mt-4">{messages[0].content}</p>
                 ) : (
                     <p className="text-gray-500">No message generated yet.</p>
                 )}
@@ -42,8 +42,8 @@ const DisplayMessage = () => {
                 {/* "Will you be my Valentine?" Section */}
                 {!loading && messages.length > 0 && !response && (
                     <div className="mt-6">
-                        <p className="text-lg font-semibold text-red-500">Will you be my Valentine? ❤️</p>
-                        <div className="flex justify-center gap-4 mt-4">
+                        <p className="text-lg md:text-xl font-semibold text-red-500">Will you be my Valentine? ❤️</p>
+                        <div className="flex flex-col md:flex-row justify-center gap-4 mt-4">
                             <button
                                 className="bg-pink-500 text-white px-6 py-2 rounded-full transition-all duration-300 ease-in-out hover:bg-pink-600 cursor-pointer"
                                 onClick={() => setResponse("yes")}
@@ -61,7 +61,7 @@ const DisplayMessage = () => {
                 )}
 
                 {/* Response Message */}
-                {response === "yes" && <p className="text-green-500  mt-4">Yay! 💕 You made my day! 😍</p>}
+                {response === "yes" && <p className="text-green-500 mt-4">Yay! 💕 You made my day! 😍</p>}
                 {response === "no" && <p className="text-gray-500 text-5xl mt-4">Oh... maybe next time? 🥺</p>}
             </motion.div>
 
