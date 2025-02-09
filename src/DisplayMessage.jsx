@@ -22,12 +22,12 @@ const DisplayMessage = () => {
     }, [name]); // Fetch message when `name` changes
 
     return (
-        <div className="h-screen flex flex-col items-center justify-center p-4">
+        <div className="min-h-screen flex flex-col items-center justify-center p-4">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="max-w-lg w-full text-center bg-white p-6 rounded-lg shadow-lg"
+                className="max-w-lg w-full text-center bg-white p-6 rounded-lg shadow-lg h-full"
             >
                 <h1 className="text-xl md:text-2xl font-semibold text-red-500">{name && `Dear ${name},`}</h1>
 
