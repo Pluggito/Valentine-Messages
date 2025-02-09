@@ -65,7 +65,7 @@ const DisplayMessage = () => {
                 {response === "no" && <p className="text-gray-500 text-5xl mt-4">Oh... maybe next time? 🥺</p>}
             </motion.div>
 
-            <button className="mt-5 text-blue-500 underline cursor-pointer" onClick={() => navigate("/next-page")}>
+            <button className="mt-5 text-blue-500 underline cursor-pointer" onClick={() => navigate("/")}>
                 Back
             </button>
         </div>

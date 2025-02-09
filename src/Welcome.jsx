@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import HoverButton from "./HoverButton";
+
 
 
 
@@ -30,7 +30,7 @@ const Welcome = () => {
     }, []);
   
     return (
-      <div className="flex items-center justify-center w-full  p-1 h-screen bg-inherit overflow-hidden flex-col gap-3">
+      <div className="flex items-center justify-center w-full p-1 bg-inherit overflow-hidden flex-col gap-3">
         <div>
         <AnimatePresence mode="wait">
           <motion.h1
@@ -38,14 +38,13 @@ const Welcome = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
             className="text-white text-6xl font-semibold "
           >
             {messages[index]}
           </motion.h1>
         </AnimatePresence>
         </div>
-        <HoverButton />
       </div>
     );
 }
