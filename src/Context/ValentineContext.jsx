@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import PropTypes from "prop-types";
 
 const ValentineContext = createContext();
 export const useValentineContext = () => useContext(ValentineContext);
@@ -16,7 +17,7 @@ export const ValentineContextProvider = ({ children }) => {
 
         try {
             const response = await fetch(
-                `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`,
+                `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -49,7 +50,11 @@ export const ValentineContextProvider = ({ children }) => {
             }
         } catch (error) {
             console.error("Error fetching message:", error);
-        }
+    };
+    
+    ValentineContextProvider.propTypes = {
+        children: PropTypes.node.isRequired,
+    };
     };
 
     return (
