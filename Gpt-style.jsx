@@ -17,10 +17,14 @@ export const ValentineContextProvider = ({ children }) => {
 
     try {
       const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`,
+        `https://unlimited-gpt-4.p.rapidapi.com/chat/completions`,
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            "X-RapidAPI-Key": import.meta.env.VITE_RAPIDAPI_KEY,
+            "X-RapidAPI-Host": "unlimited-gpt-4.p.rapidapi.com",
+          },
           body: JSON.stringify({
             contents: [
               {
@@ -50,6 +54,7 @@ export const ValentineContextProvider = ({ children }) => {
       }
     } catch (error) {
       console.error("Error fetching message:", error);
+      console.log(error);
     }
 
     ValentineContextProvider.propTypes = {
