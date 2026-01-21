@@ -60,12 +60,7 @@ export default function Menu() {
 
 
 
-        console.log('Name:', name)
      
-      
-
-
-  
 
   return (
     <header className="bg-inherit flex justify-center p-6 text-center w-xl sm:w-2xl">
